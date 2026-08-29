@@ -10,5 +10,7 @@
   "obstacle": "Availability mattered more than features, because patients were finding care through these pages.",
   "decision": "Built and maintained the applications on AWS EC2 and Elastic Beanstalk with MySQL, and integrated Salesforce with the VOIP customer-service flow.",
   "result": "Reliable access across every location, with search and social integration lifting visibility.",
-  "date": "2016"
+  "date": "2016",
+  "visual": "/projects/shot-akua.webp",
+  "visualAlt": "Screenshot of akuamindbody.com, the multi-location mental health provider whose web applications this work built and maintained."
 }

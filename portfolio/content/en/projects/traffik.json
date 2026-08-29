@@ -10,5 +10,7 @@
   "obstacle": "Every client wanted something interactive, and none of the timelines allowed bespoke infrastructure.",
   "decision": "Built React single-page applications against a Django backend, deployed on AWS EC2.",
   "result": "Interactive client sites delivered inside the campaign windows they were sold against.",
-  "date": "2016"
+  "date": "2016",
+  "visual": "/projects/shot-traffik.webp",
+  "visualAlt": "Screenshot of the TRAFFIK agency site at wearetraffik.com, the agency these client campaign builds were delivered for."
 }

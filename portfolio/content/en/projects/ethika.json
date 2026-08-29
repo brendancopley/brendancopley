@@ -10,5 +10,7 @@
   "obstacle": "A rewrite was off the table, because the store had to keep selling throughout.",
   "decision": "Refactored orders and shipping onto AWS Lambda and API Gateway, moved the storefront to a Vue SPA on S3 and CloudFront, and put CI/CD with Cypress end-to-end tests behind it.",
   "result": "Spike-tolerant infrastructure with automated deploys, and a React Native app running on the same backend.",
-  "date": "2018"
+  "date": "2018",
+  "visual": "/projects/shot-ethika.webp",
+  "visualAlt": "Screenshot of the ethika.com storefront, the direct-to-consumer site whose orders, shipping and front end this work rebuilt."
 }

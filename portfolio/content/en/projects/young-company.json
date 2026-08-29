@@ -10,5 +10,7 @@
   "obstacle": "The creative direction was the product, so speed could not come out of the design.",
   "decision": "Built Google AMP landing pages and tuned the existing PHP and MySQL stack for performance and search.",
   "result": "Award-winning mobile experiences that kept the design intent intact.",
-  "date": "2016"
+  "date": "2016",
+  "visual": "/projects/shot-youngco.webp",
+  "visualAlt": "Screenshot of youngcompany.com, the marketing agency whose client landing pages and AMP work this covers."
 }
