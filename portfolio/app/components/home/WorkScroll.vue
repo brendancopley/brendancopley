@@ -19,14 +19,19 @@ const root = ref<HTMLElement | null>(null)
 let io: IntersectionObserver | null = null
 
 onMounted(() => {
-  const panels = Array.from(root.value?.querySelectorAll<HTMLElement>('.panel') ?? [])
+  const items = Array.from(root.value?.querySelectorAll<HTMLElement>('[data-reveal]') ?? [])
 
   // Respect the motion preference: reveal everything at once instead of on scroll.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    panels.forEach(el => el.classList.add('in'))
+    items.forEach(el => el.classList.add('in'))
     return
   }
 
+  // Each line is observed on its own, so the cascade is driven by where the reader
+  // actually is rather than by the panel as a whole. The bottom margin holds the trigger
+  // back until the line is properly on screen, but it has to stay small enough that the
+  // last line of a panel still clears it: at -18% the call to action sat below the
+  // trigger and never appeared for anyone who stopped scrolling on a panel.
   io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -34,9 +39,9 @@ onMounted(() => {
         io?.unobserve(entry.target)
       }
     }
-  }, { rootMargin: '-12% 0px -12% 0px' })
+  }, { rootMargin: '0px 0px -8% 0px' })
 
-  panels.forEach(el => io!.observe(el))
+  items.forEach(el => io!.observe(el))
 })
 
 onBeforeUnmount(() => io?.disconnect())
@@ -71,30 +76,57 @@ onBeforeUnmount(() => io?.disconnect())
         aria-hidden="true"
       />
       <div class="copy">
-        <p class="eyebrow">
+        <p
+          class="eyebrow"
+          data-reveal
+          style="--i: 0"
+        >
           {{ project.dates }}
         </p>
-        <h2>{{ project.name }}</h2>
+        <h2
+          data-reveal
+          style="--i: 1"
+        >
+          {{ project.name }}
+        </h2>
         <p
           v-if="project.role"
           class="role"
+          data-reveal
+          style="--i: 2"
         >
           {{ project.role }}
         </p>
         <dl class="sodr">
-          <div v-if="project.situation">
+          <div
+            v-if="project.situation"
+            data-reveal
+            style="--i: 3"
+          >
             <dt>Situation</dt>
             <dd>{{ project.situation }}</dd>
           </div>
-          <div v-if="project.obstacle">
+          <div
+            v-if="project.obstacle"
+            data-reveal
+            style="--i: 4"
+          >
             <dt>Obstacle</dt>
             <dd>{{ project.obstacle }}</dd>
           </div>
-          <div v-if="project.decision">
+          <div
+            v-if="project.decision"
+            data-reveal
+            style="--i: 5"
+          >
             <dt>Decision</dt>
             <dd>{{ project.decision }}</dd>
           </div>
-          <div v-if="project.result">
+          <div
+            v-if="project.result"
+            data-reveal
+            style="--i: 6"
+          >
             <dt>Result</dt>
             <dd>{{ project.result }}</dd>
           </div>
@@ -105,6 +137,8 @@ onBeforeUnmount(() => io?.disconnect())
           target="_blank"
           rel="noopener"
           class="more"
+          data-reveal
+          style="--i: 7"
         >
           {{ project.link.includes('linkedin.com') ? 'More on LinkedIn' : 'Visit' }}
           <UIcon
@@ -152,14 +186,22 @@ onBeforeUnmount(() => io?.disconnect())
 .copy {
   position: relative;
   width: 100%;
-  max-width: 46rem;
+  max-width: 52rem;
   padding: 0 6vw 12vh;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.panel.in .copy {
+/* Every line slides up on its own. The index gives the cascade: the eyebrow lands
+   first, then the heading, then Situation, Obstacle, Decision, Result in order. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+[data-reveal].in {
   opacity: 1;
   transform: none;
 }
@@ -183,40 +225,40 @@ onBeforeUnmount(() => io?.disconnect())
 }
 
 .role {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.88);
-  margin: 0 0 1.25rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem;
 }
 
 /* Four short labelled lines. The label column is fixed so the values align, and it
    collapses to stacked rows on narrow viewports where 5rem of label is too much. */
 .sodr {
   display: grid;
-  gap: 0.6rem;
-  margin: 0 0 1.5rem;
+  gap: 0.85rem;
+  margin: 0 0 1.75rem;
 }
 
 .sodr > div {
   display: grid;
-  grid-template-columns: 5.5rem 1fr;
-  gap: 0.9rem;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.1rem;
   align-items: baseline;
 }
 
 .sodr dt {
   font-family: var(--font-mono, ui-monospace, monospace);
-  font-size: 10px;
+  font-size: clamp(10px, 0.85vw, 12px);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(240, 160, 122, 0.85);
+  color: rgba(240, 160, 122, 0.9);
 }
 
 .sodr dd {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
 }
 
 @media (max-width: 640px) {
@@ -230,7 +272,7 @@ onBeforeUnmount(() => io?.disconnect())
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
   font-weight: 500;
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
@@ -248,17 +290,17 @@ onBeforeUnmount(() => io?.disconnect())
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .copy {
+  [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
   }
 }
 
-/* Without scripting the IntersectionObserver never runs, and .copy would stay at
+/* Without scripting the IntersectionObserver never runs, and every line would stay at
    opacity 0, leaving the entire portfolio invisible. Show it instead. */
 @media (scripting: none) {
-  .copy {
+  [data-reveal] {
     opacity: 1;
     transform: none;
   }
