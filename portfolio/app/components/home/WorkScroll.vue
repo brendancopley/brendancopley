@@ -78,84 +78,11 @@ onBeforeUnmount(() => io?.disconnect())
         aria-hidden="true"
       />
       <div class="inner">
-      <div class="copy">
-        <p
-          class="eyebrow"
-          data-reveal
-          style="--i: 0"
-        >
-          {{ project.dates }}
-        </p>
-        <h2
-          data-reveal
-          style="--i: 1"
-        >
-          {{ project.name }}
-        </h2>
-        <p
-          v-if="project.role"
-          class="role"
-          data-reveal
-          style="--i: 2"
-        >
-          {{ project.role }}
-        </p>
-        <dl class="sodr">
-          <div
-            v-if="project.situation"
-            data-reveal
-            style="--i: 3"
-          >
-            <dt>Situation</dt>
-            <dd>{{ project.situation }}</dd>
-          </div>
-          <div
-            v-if="project.obstacle"
-            data-reveal
-            style="--i: 4"
-          >
-            <dt>Obstacle</dt>
-            <dd>{{ project.obstacle }}</dd>
-          </div>
-          <div
-            v-if="project.decision"
-            data-reveal
-            style="--i: 5"
-          >
-            <dt>Decision</dt>
-            <dd>{{ project.decision }}</dd>
-          </div>
-          <div
-            v-if="project.result"
-            data-reveal
-            style="--i: 6"
-          >
-            <dt>Result</dt>
-            <dd>{{ project.result }}</dd>
-          </div>
-        </dl>
-        <NuxtLink
-          v-if="project.link"
-          :to="project.link"
-          target="_blank"
-          rel="noopener"
-          class="more"
-          data-reveal
-          style="--i: 7"
-        >
-          {{ project.link.includes('linkedin.com') ? 'More on LinkedIn' : 'Visit' }}
-          <UIcon
-            name="heroicons:arrow-right"
-            class="size-4"
-          />
-        </NuxtLink>
-      </div>
-
       <figure
         v-if="project.visual"
-        :class="['visual', 'from-right', { 'is-diagram': project.visual.endsWith('.svg') }]"
+        :class="['visual', 'from-left', { 'is-diagram': project.visual.endsWith('.svg') }]"
         data-reveal
-        style="--i: 3"
+        style="--i: 0"
       >
         <video
           v-if="project.visual.endsWith('.webm')"
@@ -184,6 +111,79 @@ onBeforeUnmount(() => io?.disconnect())
           decoding="async"
         >
       </figure>
+      <div class="copy">
+        <p
+          class="eyebrow"
+          data-reveal
+          style="--i: 1"
+        >
+          {{ project.dates }}
+        </p>
+        <h2
+          data-reveal
+          style="--i: 2"
+        >
+          {{ project.name }}
+        </h2>
+        <p
+          v-if="project.role"
+          class="role"
+          data-reveal
+          style="--i: 3"
+        >
+          {{ project.role }}
+        </p>
+        <dl class="sodr">
+          <div
+            v-if="project.situation"
+            data-reveal
+            style="--i: 4"
+          >
+            <dt>Situation</dt>
+            <dd>{{ project.situation }}</dd>
+          </div>
+          <div
+            v-if="project.obstacle"
+            data-reveal
+            style="--i: 5"
+          >
+            <dt>Obstacle</dt>
+            <dd>{{ project.obstacle }}</dd>
+          </div>
+          <div
+            v-if="project.decision"
+            data-reveal
+            style="--i: 6"
+          >
+            <dt>Decision</dt>
+            <dd>{{ project.decision }}</dd>
+          </div>
+          <div
+            v-if="project.result"
+            data-reveal
+            style="--i: 7"
+          >
+            <dt>Result</dt>
+            <dd>{{ project.result }}</dd>
+          </div>
+        </dl>
+        <NuxtLink
+          v-if="project.link"
+          :to="project.link"
+          target="_blank"
+          rel="noopener"
+          class="more"
+          data-reveal
+          style="--i: 8"
+        >
+          {{ project.link.includes('linkedin.com') ? 'More on LinkedIn' : 'Visit' }}
+          <UIcon
+            name="heroicons:arrow-right"
+            class="size-4"
+          />
+        </NuxtLink>
+      </div>
+
       </div>
     </article>
   </section>
@@ -273,7 +273,7 @@ onBeforeUnmount(() => io?.disconnect())
 
   /* Slide up rather than in from the side. A horizontal offset on a full-width element
      is what pushes a phone viewport into horizontal scroll. */
-  .from-right {
+  .from-left {
     --shift-x: 0px;
     --shift-y: 28px;
   }
@@ -300,8 +300,8 @@ onBeforeUnmount(() => io?.disconnect())
 }
 
 /* Only swaps the offsets, so the fallbacks below that reset transform still apply. */
-.from-right {
-  --shift-x: 56px;
+.from-left {
+  --shift-x: -56px;
   --shift-y: 0px;
 }
 
