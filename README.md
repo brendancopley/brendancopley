@@ -10,7 +10,7 @@ Senior AI Software Engineer at **Cisco**. Consulting independently through **RAD
 
 ---
 
-## How I build agents that survive production
+## 🔐 How I build agents that survive production
 
 Most agent architectures put the model in the data path: it holds a token, calls an API,
 reasons over the rows. That is the obvious design, and it is the one that fails an enterprise
@@ -32,7 +32,7 @@ Kubernetes.
 
 ---
 
-## How I know it is working
+## 📊 How I know it is working
 
 An agent that cannot be measured cannot be improved, only fiddled with. Someone adjusts a
 prompt, it looks better on the three examples anyone remembers, and something else silently
@@ -48,7 +48,7 @@ agent on a platform serving 44 million students daily.
 
 ---
 
-## Selected work
+## 🛠️ Selected work
 
 <table>
 <tr>
@@ -115,7 +115,7 @@ on S3 and CloudFront, with CI/CD and Cypress end-to-end tests behind it.
 
 ---
 
-## Work with me
+## 📅 Work with me
 
 I take AI systems from prototype to production. If you have an agent that works in a demo and
 needs to survive real data, real permissions and real volume, that is the work I do.
@@ -124,7 +124,7 @@ needs to survive real data, real permissions and real volume, that is the work I
 
 ---
 
-## Currently
+## ⚡ Currently
 
 - Senior AI Software Engineer at **Cisco**
 - Consulting independently through **RADFAB**
@@ -132,7 +132,7 @@ needs to survive real data, real permissions and real volume, that is the work I
 - Reading for a **BLA in Computer Science, Harvard Extension School**
 
 <details>
-<summary><b>Full career</b></summary>
+<summary><b>🗂️ Full career</b></summary>
 
 <br>
 
@@ -154,7 +154,7 @@ Full write-ups, with the situation and the result for each, are on
 </details>
 
 <details>
-<summary><b>Stack</b></summary>
+<summary><b>🧰 Stack</b></summary>
 
 <br>
 
@@ -167,7 +167,7 @@ Full write-ups, with the situation and the result for each, are on
 </details>
 
 <details>
-<summary><b>GitHub stats</b></summary>
+<summary><b>📈 GitHub stats</b></summary>
 
 <br>
 
