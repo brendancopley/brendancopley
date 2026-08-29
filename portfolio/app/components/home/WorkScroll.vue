@@ -153,7 +153,7 @@ onBeforeUnmount(() => io?.disconnect())
 
       <figure
         v-if="project.visual"
-        class="visual from-right"
+        :class="['visual', 'from-right', { 'is-diagram': project.visual.endsWith('.svg') }]"
         data-reveal
         style="--i: 3"
       >
@@ -254,10 +254,34 @@ onBeforeUnmount(() => io?.disconnect())
   height: auto;
 }
 
-/* Below this the copy already uses most of the panel; a second column would force
-   the write-up off screen, so the generated background carries the visual weight. */
+/* Below this the two columns become one: the write-up first, then the artifact under it.
+   The panel is min-height rather than height, so it simply grows past one viewport on a
+   phone instead of squeezing the copy. */
 @media (max-width: 1023px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.75rem;
+    padding-top: 12vh;
+  }
+
   .visual {
+    flex: none;
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  /* Slide up rather than in from the side. A horizontal offset on a full-width element
+     is what pushes a phone viewport into horizontal scroll. */
+  .from-right {
+    --shift-x: 0px;
+    --shift-y: 28px;
+  }
+
+  /* Screenshots read fine at phone width. The diagrams do not: a 900-unit viewBox at
+     335px puts their labels near 7px, which looks like a broken image rather than
+     architecture. They stay desktop-only until there is a phone-shaped version. */
+  .visual.is-diagram {
     display: none;
   }
 }
