@@ -10,7 +10,7 @@
   "situation": "Studios and retailers needed production software tied to launch dates that could not move.",
   "obstacle": "Conference-floor and campaign systems had to hold up at crowd scale on day one, with no soft launch.",
   "decision": "Shipped an on-prem LibSQL leaderboard game for the Fallout launch with Amazon Prime Video and Bethesda, a .NET and Cosmos DB backend for Lionsgate’s SISU, and Kafka-driven asset infrastructure on AWS EKS for CarParts.com.",
-  "result": "5,000+ players across CCXP Brazil 2023 and Mexico City 2025, a Bronze Clio in 2023, and a 500% increase in asset processing speed.",
+  "result": "5,000+ players across CCXP Brazil 2023, CCXP Mexico City 2025 and Gamescom Cologne 2025, a Bronze Clio in 2023, and a 500% increase in asset processing speed.",
   "date": "2015",
   "visual": "/projects/shot-fallout-ccxp.webp",
   "visualAlt": "Screenshot of the Fallout CCXP activation: a Vault-Tec terminal screen reading \"Bem-vindos a 2077\" built for the CCXP Brazil launch."
