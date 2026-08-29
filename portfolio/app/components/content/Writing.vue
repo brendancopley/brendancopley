@@ -9,7 +9,7 @@ const { locale } = useI18n()
 
 const { data: articles } = await useAsyncData('articles-' + locale.value, async () => {
   const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).all() as Collections['articles_en'][] | Collections['articles_fr'][]
+  return await queryCollection(collection).all() as Collections['articles_en'][]
 }, {
   watch: [locale],
 })
@@ -100,7 +100,7 @@ const toggleTag = (tag: string) => {
           :title="article.title"
           :date="article.date"
           :image="article.image"
-          :path="article.path"
+          :path="article.path.replace(/^\/en(?=\/|$)/, '') || '/'"
         />
       </li>
     </TransitionGroup>

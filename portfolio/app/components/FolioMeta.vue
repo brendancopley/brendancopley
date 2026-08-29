@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import type { ContentEnCollectionItem, ContentFrCollectionItem } from '@nuxt/content'
-
-useScriptPlausibleAnalytics({
-  domain: 'canvas.hrcd.fr',
-  scriptInput: {
-    src: 'https://analytics.hrcd.fr/js/script.js',
-  },
-})
+import type { ContentEnCollectionItem } from '@nuxt/content'
 
 const { page, isWriting } = defineProps<{
-  page: ContentEnCollectionItem | ContentFrCollectionItem
+  page: ContentEnCollectionItem
   isWriting: boolean
 }>()
 
@@ -32,7 +25,7 @@ useSeoMeta({
   ogTitle: pageSEO.value.title,
   ogDescription: pageSEO.value.description,
   ogType: isWriting ? 'article' : 'website',
-  ogUrl: seo.url,
+  ogUrl: seo.url.replace(/\/$/, '') + route.path,
   author: profile.name,
   title: pageSEO.value.title,
   description: pageSEO.value.description,
@@ -53,7 +46,7 @@ useHead({
   link,
 })
 
-defineOgImage({ url: 'https://canvas.hrcd.fr/og.png', width: 1200, height: 630, alt: 'Home image' })
+defineOgImage({ url: 'https://brendancopley.com/og.png', width: 1200, height: 630, alt: 'Brendan Copley — Principal AI Engineer' })
 </script>
 
 <template>

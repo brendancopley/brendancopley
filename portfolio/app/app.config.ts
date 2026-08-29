@@ -1,26 +1,26 @@
 export default defineAppConfig({
   global: {
-    meetingLink: 'https://cal.com/hugorcd/15min',
+    meetingLink: 'https://cal.com/radfab',
     available: true,
   },
   profile: {
-    name: 'Hugo Richard',
-    job: 'Frontend Architect and Designer',
-    email: 'contact@hrcd.fr',
-    phone: '(+33) 6 21 56 22 18',
-    picture: 'https://avatars.githubusercontent.com/u/71938701?v=4',
+    name: 'Brendan Copley',
+    job: 'Principal AI Engineer — production agentic systems',
+    email: 'brendancopley@protonmail.com',
+    // Deliberately no phone number: the contact surface is email and cal.com/radfab.
+    location: 'Irvine, California',
+    picture: 'https://avatars.githubusercontent.com/u/15661730?v=4',
   },
+  // Social.vue throws on any link its regex map does not recognise, so only add
+  // keys whose domain is listed there (github, twitter, linkedin, instagram, spotify).
   socials: {
-    github: 'https://github.com/HugoRCD',
-    twitter: 'https://twitter.com/HugoRCD__',
-    linkedin: 'https://www.linkedin.com/in/hugo-richard-0801',
-    instagram: 'https://www.instagram.com/hugo.rcd_',
-    spotify: 'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
+    github: 'https://github.com/brendancopley',
+    linkedin: 'https://www.linkedin.com/in/brendancopley',
   },
   seo: {
-    title: 'Canvas a Nuxt portfolio template',
-    description: 'Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD',
-    url: 'https://canvas.hrcd.fr',
+    title: 'Brendan Copley — Principal AI Engineer',
+    description: 'I build agentic AI systems that survive production. 12+ years shipping for Amazon Prime Video, Bethesda, Lionsgate, Cisco and Renaissance Learning. LangGraph, LangSmith, MLX fine-tuning and evaluation pipelines.',
+    url: 'https://brendancopley.com',
   },
   ui: {
     colors: {

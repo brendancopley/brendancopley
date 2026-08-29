@@ -1,0 +1,74 @@
+{
+  "block-brain-puzzle": {
+    "jobId": "6073e813-6544-4a71-a128-4e75240682d9",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180625_6073e813-6544-4a71-a128-4e75240682d9.png",
+    "prompt": "Overhead view of brightly coloured geometric wooden puzzle blocks and a set of dice scattered on a matte black desk beside a laptop closed shut, one warm lamp raking across from the left, pieces casting long shadows. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/block-brain-puzzle.png"
+  },
+  "mcp-chain-of-draft": {
+    "jobId": "1cba2fd5-0830-460b-bf4b-e84f50e3c450",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180629_1cba2fd5-0830-460b-bf4b-e84f50e3c450.png",
+    "prompt": "A single terminal window glowing on a dark monitor in an otherwise unlit room, hands resting on a mechanical keyboard, the screen content abstract and out of focus, warm desk lamp behind. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/mcp-chain-of-draft.png"
+  },
+  "cisco-wwai": {
+    "jobId": "dd6dfd94-0887-4b48-aa7f-394555e348af",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180633_dd6dfd94-0887-4b48-aa7f-394555e348af.png",
+    "prompt": "A long aisle between server cabinets in a dark data centre, orderly bundled cabling in disciplined runs, small amber status LEDs receding into depth, one maintenance light overhead. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/cisco-wwai.png"
+  },
+  "moderation-agent": {
+    "jobId": "410f39a2-7b76-4670-8300-533992920c46",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180637_410f39a2-7b76-4670-8300-533992920c46.png",
+    "prompt": "A quiet review workstation at night: several small matte monitors arranged in a shallow arc, screens deliberately blurred and abstract, a notebook and pen beside the keyboard, warm lamp from camera-left. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/moderation-agent.png"
+  },
+  "carparts": {
+    "jobId": "596f6d03-5d80-4f30-ae9e-f612265785f6",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180641_596f6d03-5d80-4f30-ae9e-f612265785f6.png",
+    "prompt": "A distribution warehouse at night, a conveyor line of unlabelled cardboard cartons receding into darkness, steel racking towering above, one sodium work light. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/carparts.png"
+  },
+  "utelogy": {
+    "jobId": "4f566fda-fb08-4731-afec-728b2393d52d",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180645_4f566fda-fb08-4731-afec-728b2393d52d.png",
+    "prompt": "A dark control room with a wall of dozens of matte monitors tiled into one large display, screens abstract and softly out of focus, an empty operator chair in the foreground. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/utelogy.png"
+  },
+  "fallout-ccxp": {
+    "jobId": "295ffab2-c7e4-4b8e-aed5-36cf92caa002",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180648_295ffab2-c7e4-4b8e-aed5-36cf92caa002.png",
+    "prompt": "A convention hall exhibition floor late at night after closing, an empty custom-built game kiosk with an unbranded arcade cabinet, crowd barriers and cable runs, ambient amber light. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/fallout-ccxp.png"
+  },
+  "sisu": {
+    "jobId": "8e86c144-54f3-489c-a33d-f34caea1a605",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_180652_8e86c144-54f3-489c-a33d-f34caea1a605.png",
+    "prompt": "A film post-production suite at night: a colour-grading desk with control surfaces and trackballs, a large reference monitor showing an abstract dark frame, warm bias light behind. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/sisu.png"
+  }
+}

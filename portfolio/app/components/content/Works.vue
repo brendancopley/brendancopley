@@ -33,5 +33,8 @@ const { data: projects } = await useAsyncData('projects', async () => {
         :project
       />
     </div>
+    <div class="writing mt-12">
+      <slot name="writeups" />
+    </div>
   </section>
 </template>

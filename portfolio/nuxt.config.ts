@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   css: ['~/assets/style/main.css'],
 
   site: {
-    url: 'https://canvas.hrcd.fr',
+    url: 'https://brendancopley.com',
     defaultLocale: 'en',
     indexable: true,
   },
@@ -61,10 +61,9 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: {
-    // Needed to activate preview on Nuxt Studio
-    '/': { prerender: false },
-  },
+  // NOTE: the template disabled prerendering of '/' for Nuxt Studio live preview.
+  // That left the whole site as an SPA shell with no server-rendered HTML — the exact
+  // reason the old site was invisible to search engines. Every route is prerendered now.
 
   future: {
     compatibilityVersion: 4,
@@ -83,7 +82,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: true,
-      routes: ['/en', '/fr'],
+      routes: ['/'],
     },
   },
 
@@ -102,14 +101,14 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'en', name: 'English', language: 'en-US' },
-      { code: 'fr', name: 'French', language: 'fr-FR' },
     ],
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
-    strategy: 'prefix',
+    // prefix_except_default so canonical URLs are /works, not /en/works.
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
   },
 
@@ -129,5 +128,16 @@ export default defineNuxtConfig({
 
   ogImage: {
     zeroRuntime: true,
+  },
+
+  // The default sitemap picked up two things that must not be indexed: the /en/* aliases
+  // (duplicates of the canonical unprefixed routes, and they 404) and @nuxt/content's
+  // internal sql_dump endpoints.
+  sitemap: {
+    exclude: ['/en', '/en/**', '/__nuxt_content/**'],
+  },
+
+  robots: {
+    disallow: ['/__nuxt_content/'],
   },
 })

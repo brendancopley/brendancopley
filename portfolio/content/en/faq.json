@@ -1,51 +1,38 @@
 {
   "title": "FAQ",
-  "subtitle": "Things I get asked a lot",
+  "subtitle": "What people ask before booking a call",
   "faqQuestions": [
     {
-      "title": "Services",
+      "title": "Working together",
       "questions": [
         {
-          "label": "What services do you offer?",
-          "content": "I offer a range of services including web design, web development, branding, and photography. I can also help with SEO and social media marketing."
+          "label": "What do you actually do?",
+          "content": "I take AI systems that work in a demo and make them work in production. In practice that means multi-agent architecture, tool and permission design, retrieval that stays accurate under real data, evaluation pipelines that catch regressions before users do, and fine-tuning when a smaller local model beats an API call."
         },
         {
-          "label": "Can you teach me how to make a website?",
-          "content": "I don't offer courses at the moment, but I can recommend resources and advice to help you get the most out of your learning."
+          "label": "We already built an agent with n8n or a no-code tool. Is that wasted?",
+          "content": "No, and it is usually the right way to start. A prototype proves the workflow is worth building. What tends to break next is everything around it: permissions, auditability, cost at volume, and knowing whether a change made the system better or worse. That is the work I do."
+        },
+        {
+          "label": "Can you work with our existing team?",
+          "content": "Yes, and it is the arrangement I prefer. I have spent most of my career embedded with in-house teams. I would rather leave your engineers able to run the system than leave them dependent on me."
+        },
+        {
+          "label": "Do you take full-time roles?",
+          "content": "Consulting through RADFAB is the main engagement model, but I am open to the right full-time role. Easiest to just ask on a call."
         }
       ]
     },
     {
-      "title": "Pricing",
+      "title": "Engagements",
       "questions": [
         {
-          "label": "How much does a project cost?",
-          "content": "The cost of a project depends on many factors, such as the size of the project, the features, the development time, etc. The initial amount of my web services starts at 2000€, with an average between 3000€ and 10000€. For any other design or consulting service, I usually charge 450€ per day."
+          "label": "How do engagements usually start?",
+          "content": "A short architecture review. You show me what exists, I tell you what will break first and what it would take to fix. That is often enough on its own; if it is not, we scope the build from there."
         },
         {
-          "label": "How does payment work for a project?",
-          "content": "I ask for a 40% deposit before starting a project, and the remaining 60% after successful delivery. I accept payments by bank transfer, PayPal, etc..."
-        },
-        {
-          "label": "How long does a project take?",
-          "content": "It's difficult to give an exact estimate, as each project is different, but the majority of my past work has taken between 2 weeks and 2 months."
-        },
-        {
-          "label": "Do you offer discounts?",
-          "content": "I offer a 15% discount for students and non-profit organizations."
-        }
-      ]
-    },
-    {
-      "title": "Personal",
-      "questions": [
-        {
-          "label": "What do you enjoy most about this work?",
-          "content": "I love learning new things and being able to create just about anything from scratch, creating beautiful things that people will use and appreciate."
-        },
-        {
-          "label": "Hobbies outside of work?",
-          "content": "I love what I do, so I usually spend a lot of time working on personal projects, photography, etc. I'm also a big sports fan. I often go to the gym and I recently started climbing!"
+          "label": "How do we start?",
+          "content": "Book a call. Bring the system you are worried about, or the one you have not built yet."
         }
       ]
     }
