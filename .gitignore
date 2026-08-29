@@ -28,3 +28,6 @@ components.d.ts
 # Higgsfield originals. Only the derived webp variants in portfolio/public/projects ship;
 # regeneration is driven from content/higgsfield/**/jobs*.json, which IS committed.
 media-src/
+
+# MCP server scaffolding, not part of this project
+.spec-workflow/
