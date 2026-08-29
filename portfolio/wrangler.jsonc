@@ -1,0 +1,19 @@
+{
+  // Nitro merges this over the config it generates at build time. Do not set
+  // `main` or `assets` here: the cloudflare_module preset owns both and will
+  // warn that your values were ignored.
+  "name": "brendancopley",
+  "compatibility_date": "2025-01-05",
+  // Keep the *.workers.dev URL alive as a preview/fallback. Wrangler disables
+  // it by default when it is not declared, which silently 404s the preview.
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  // Declarative custom domains: every deploy reasserts them, so the domain
+  // cannot silently detach the way a CNAME file in the build output could.
+  "routes": [
+    { "pattern": "brendancopley.com", "custom_domain": true },
+    { "pattern": "www.brendancopley.com", "custom_domain": true }
+  ]
+}

@@ -11,18 +11,18 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Add write workflow permissions
+# The deploy pushes to Cloudflare, not to a branch in this repo.
 permissions:
-  contents: write
+  contents: read
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "deploy"
   cancel-in-progress: true
 
 jobs:
   # Build job
-  build-and-deploy:
+  build:
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -58,14 +58,13 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.pkgman.outputs.package_manager }} install
 
+      # The Cloudflare preset lives in nuxt.config.ts so local and CI builds
+      # produce the same output.
       - name: Generate
-        run: npx nuxi build --preset github_pages
+        run: npx nuxi build
         env:
           NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-          
 
-      # Deployment job
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: portfolio/.output/public
+      # No deploy step: releases are cut locally with `pnpm deploy` (nuxt build
+      # && wrangler deploy). This job exists to catch a broken build on main,
+      # which is why it needs no Cloudflare credentials.
