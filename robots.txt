@@ -1,6 +1,6 @@
 # START nuxt-robots (indexable)
 User-agent: *
-Disallow: 
+Disallow: /__nuxt_content/
 
-Sitemap: https://canvas.hrcd.fr/sitemap_index.xml
+Sitemap: https://brendancopley.com/sitemap_index.xml
 # END nuxt-robots

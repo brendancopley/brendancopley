@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img"
+     aria-label="Evaluation pipeline diagram: a domain corpus feeds synthetic data generation, which fine-tunes a local model. Held-out cases are graded blind, results drive reinforcement learning back into fine-tuning, and a release gate holds the accuracy and hallucination thresholds.">
+  <defs>
+    <style>
+      .lbl { font: 600 20px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: rgba(255,255,255,.9); }
+      .sub { font: 400 15px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: rgba(255,255,255,.5); }
+      .cap { font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; fill: #F0A07A; }
+      .num { font: 600 14px ui-monospace, SFMono-Regular, Menlo, monospace; fill: rgba(255,255,255,.35); }
+      .box { fill: rgba(255,255,255,.045); stroke: rgba(255,255,255,.2); stroke-width: 1.25; rx: 10; }
+      .accent { stroke: rgba(240,160,122,.55); }
+      .flow { stroke: rgba(255,255,255,.32); stroke-width: 1.5; fill: none; marker-end: url(#b); }
+      .loop { stroke: rgba(240,160,122,.5); stroke-width: 1.5; fill: none; stroke-dasharray: 6 5; marker-end: url(#c); }
+    </style>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="rgba(255,255,255,.42)"/>
+    </marker>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="rgba(240,160,122,.65)"/>
+    </marker>
+  </defs>
+
+  <text class="num" x="60" y="72">01</text>
+  <rect class="box" x="60" y="84" width="248" height="62"/>
+  <text class="lbl" x="184" y="110" text-anchor="middle">Domain corpus</text>
+  <text class="sub" x="184" y="130" text-anchor="middle">real classroom content</text>
+
+  <path class="flow" d="M308 115 L392 115"/>
+
+  <text class="num" x="392" y="72">02</text>
+  <rect class="box" x="392" y="84" width="248" height="62"/>
+  <text class="lbl" x="516" y="110" text-anchor="middle">Synthetic generation</text>
+  <text class="sub" x="516" y="130" text-anchor="middle">edge cases the corpus lacks</text>
+
+  <path class="flow" d="M516 146 L516 200"/>
+
+  <text class="num" x="392" y="188">03</text>
+  <rect class="box accent" x="392" y="200" width="248" height="66"/>
+  <text class="lbl" x="516" y="227" text-anchor="middle">Fine-tune Qwen 2.5</text>
+  <text class="sub" x="516" y="248" text-anchor="middle">LoRA, run locally on MLX</text>
+
+  <path class="flow" d="M516 266 L516 320"/>
+
+  <text class="num" x="392" y="308">04</text>
+  <rect class="box" x="392" y="320" width="248" height="66"/>
+  <text class="lbl" x="516" y="347" text-anchor="middle">Held-out eval set</text>
+  <text class="sub" x="516" y="368" text-anchor="middle">fixed, versioned, never trained on</text>
+
+  <path class="flow" d="M516 386 L516 440"/>
+
+  <text class="num" x="392" y="428">05</text>
+  <rect class="box" x="392" y="440" width="248" height="66"/>
+  <text class="lbl" x="516" y="467" text-anchor="middle">Blind grading</text>
+  <text class="sub" x="516" y="488" text-anchor="middle">graders cannot tell model from human</text>
+
+  <!-- RL loop back into fine-tuning -->
+  <path class="loop" d="M392 473 L232 473 L232 233 L392 233"/>
+  <text class="cap" x="232" y="356" text-anchor="middle">RL FROM</text>
+  <text class="cap" x="232" y="374" text-anchor="middle">EVAL RESULTS</text>
+
+  <path class="flow" d="M640 473 L724 473 L724 560 L640 560"/>
+
+  <text class="num" x="60" y="528">06</text>
+  <rect class="box accent" x="60" y="540" width="580" height="66"/>
+  <text class="lbl" x="350" y="567" text-anchor="middle">Release gate</text>
+  <text class="sub" x="350" y="588" text-anchor="middle">100% on the moderation filter · under 1% hallucination on domain tasks</text>
+</svg>
