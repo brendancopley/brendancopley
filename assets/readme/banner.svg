@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img"
+     aria-label="Brendan Copley, Principal AI Engineer. Your agent works in a demo. I make it work in production. Shipped for Amazon Prime Video, Bethesda, Lionsgate, Cisco and Renaissance Learning.">
+  <defs>
+    <!-- Font stacks are deliberately boring. An SVG rendered through an img tag cannot
+         load webfonts, so anything exotic would silently fall back and reflow. -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D9541E" stop-opacity=".26"/>
+      <stop offset="60%" stop-color="#D9541E" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#D9541E" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card">
+      <rect width="1280" height="360" rx="16"/>
+    </clipPath>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D9541E" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#D9541E" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L0 0 0 32" fill="none" stroke="#FFFFFF" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1280" height="360" fill="#0B0B0D"/>
+    <rect width="1280" height="360" fill="url(#grid)"/>
+    <circle cx="1110" cy="90" r="340" fill="url(#glow)"/>
+  </g>
+
+  <text x="72" y="96"
+        font-family="SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="15" font-weight="600" letter-spacing="4.5" fill="#F0A07A">PRINCIPAL AI ENGINEER</text>
+
+  <text x="72" y="176"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="66" font-weight="700" letter-spacing="-1.5" fill="#FFFFFF">Brendan Copley</text>
+
+  <rect x="72" y="204" width="330" height="2" fill="url(#rule)"/>
+
+  <text x="72" y="252"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="27" font-weight="400" fill="#FFFFFF" fill-opacity=".82">Your agent works in a demo.</text>
+  <text x="72" y="288"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="27" font-weight="600" fill="#FFFFFF">I make it work in production.</text>
+
+  <text x="72" y="330"
+        font-family="SFMono-Regular, Menlo, Consolas, monospace"
+        font-size="13" font-weight="500" letter-spacing="2.2" fill="#FFFFFF" fill-opacity=".42">AMAZON PRIME VIDEO  ·  BETHESDA  ·  LIONSGATE  ·  CISCO  ·  RENAISSANCE LEARNING</text>
+</svg>

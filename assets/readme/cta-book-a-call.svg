@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" width="260" height="56" role="img"
+     aria-label="Book a call">
+  <rect x="1" y="1" width="258" height="54" rx="27" fill="#D9541E"/>
+  <text x="44" y="35"
+        font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="17" font-weight="600" fill="#FFFFFF">Book a call</text>
+  <path d="M186 28 L206 28 M199 21 L206 28 L199 35"
+        fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
