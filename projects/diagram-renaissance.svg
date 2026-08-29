@@ -19,6 +19,8 @@
     </marker>
   </defs>
 
+  <rect id="card" x="0" y="0" width="900" height="640" rx="14" fill="#0B0B0D"/>
+
   <text class="num" x="60" y="72">01</text>
   <rect class="box" x="60" y="84" width="248" height="62"/>
   <text class="lbl" x="184" y="110" text-anchor="middle">Domain corpus</text>
