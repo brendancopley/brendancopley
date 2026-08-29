@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" role="img"
+     aria-label="Orchestration diagram: a request is classified by a routing layer and dispatched to domain-specialised agents, which emit validated calls that the platform executes against approved endpoints. The language model sits outside the credential boundary.">
+  <defs>
+    <style>
+      .lbl { font: 600 20px ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; fill: rgba(255,255,255,.9); }
+      .sub { font: 400 15px ui-sans-serif, system-ui, -apple-system, sans-serif; fill: rgba(255,255,255,.5); }
+      .cap { font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; fill: #F0A07A; text-transform: uppercase; }
+      .zone { font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; fill: rgba(255,255,255,.42); }
+      .box { fill: rgba(255,255,255,.045); stroke: rgba(255,255,255,.2); stroke-width: 1.25; rx: 10; }
+      .accent { stroke: rgba(240,160,122,.55); }
+      .flow { stroke: rgba(255,255,255,.32); stroke-width: 1.5; fill: none; marker-end: url(#a); }
+      .bound { fill: none; stroke: rgba(240,160,122,.4); stroke-width: 1.25; stroke-dasharray: 6 5; rx: 14; }
+      .boundp { fill: none; stroke: rgba(255,255,255,.16); stroke-width: 1.25; stroke-dasharray: 6 5; rx: 14; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="rgba(255,255,255,.42)"/>
+    </marker>
+  </defs>
+
+  <!-- model side -->
+  <rect class="bound" x="24" y="52" width="852" height="250"/>
+  <text class="zone" x="44" y="44">MODEL SIDE  ·  NO CREDENTIAL</text>
+
+  <rect class="box" x="352" y="76" width="196" height="52"/>
+  <text class="lbl" x="450" y="107" text-anchor="middle">Request</text>
+
+  <path class="flow" d="M450 128 L450 164"/>
+
+  <rect class="box accent" x="322" y="164" width="256" height="60"/>
+  <text class="lbl" x="450" y="188" text-anchor="middle">Routing layer</text>
+  <text class="sub" x="450" y="209" text-anchor="middle">classifies intent, picks a domain</text>
+
+  <path class="flow" d="M380 224 L232 252"/>
+  <path class="flow" d="M450 224 L450 252"/>
+  <path class="flow" d="M520 224 L668 252"/>
+
+  <rect class="box" x="128" y="252" width="208" height="50"/>
+  <text class="lbl" x="232" y="282" text-anchor="middle">Headcount agent</text>
+
+  <rect class="box" x="346" y="252" width="208" height="50"/>
+  <text class="lbl" x="450" y="282" text-anchor="middle">Finance agent</text>
+
+  <rect class="box" x="564" y="252" width="208" height="50"/>
+  <text class="lbl" x="668" y="282" text-anchor="middle">Org agent</text>
+
+  <!-- the handoff -->
+  <path class="flow" d="M232 302 L232 336 L450 336 L450 366"/>
+  <path class="flow" d="M450 302 L450 366" opacity=".55"/>
+  <path class="flow" d="M668 302 L668 336 L450 336" opacity=".55"/>
+  <rect x="256" y="314" width="388" height="22" rx="4" fill="#0d0d0f"/>
+  <text class="cap" x="450" y="330" text-anchor="middle">EMITS A CALL, DOES NOT MAKE ONE</text>
+
+  <!-- platform side -->
+  <rect class="boundp" x="24" y="366" width="852" height="240"/>
+  <text class="zone" x="44" y="628">PLATFORM SIDE  ·  HOLDS THE CREDENTIAL</text>
+
+  <rect class="box accent" x="286" y="382" width="328" height="64"/>
+  <text class="lbl" x="450" y="408" text-anchor="middle">Validate + authorise</text>
+  <text class="sub" x="450" y="429" text-anchor="middle">schema check, least-privilege scope, audit log</text>
+
+  <path class="flow" d="M370 446 L268 496"/>
+  <path class="flow" d="M530 446 L632 496"/>
+
+  <rect class="box" x="150" y="496" width="236" height="56"/>
+  <text class="lbl" x="268" y="522" text-anchor="middle">Workday REST</text>
+  <text class="sub" x="268" y="541" text-anchor="middle">approved endpoints only</text>
+
+  <rect class="box" x="514" y="496" width="236" height="56"/>
+  <text class="lbl" x="632" y="522" text-anchor="middle">Finance REST</text>
+  <text class="sub" x="632" y="541" text-anchor="middle">approved endpoints only</text>
+</svg>

@@ -75,6 +75,7 @@ onBeforeUnmount(() => io?.disconnect())
         class="scrim"
         aria-hidden="true"
       />
+      <div class="inner">
       <div class="copy">
         <p
           class="eyebrow"
@@ -147,6 +148,21 @@ onBeforeUnmount(() => io?.disconnect())
           />
         </NuxtLink>
       </div>
+
+      <figure
+        v-if="project.visual"
+        class="visual from-right"
+        data-reveal
+        style="--i: 3"
+      >
+        <img
+          :src="project.visual"
+          :alt="project.visualAlt ?? ''"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
+      </div>
     </article>
   </section>
 </template>
@@ -183,22 +199,63 @@ onBeforeUnmount(() => io?.disconnect())
   );
 }
 
-.copy {
+.inner {
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 4vw;
   width: 100%;
-  max-width: 52rem;
   padding: 0 6vw 12vh;
+}
+
+.copy {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 44rem;
+}
+
+.visual {
+  flex: 0 0 44%;
+  margin: 0 0 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(10, 10, 12, 0.72);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Below this the copy already uses most of the panel; a second column would force
+   the write-up off screen, so the generated background carries the visual weight. */
+@media (max-width: 1023px) {
+  .visual {
+    display: none;
+  }
 }
 
 /* Every line slides up on its own. The index gives the cascade: the eyebrow lands
    first, then the heading, then Situation, Obstacle, Decision, Result in order. */
 [data-reveal] {
+  --shift-x: 0px;
+  --shift-y: 28px;
   opacity: 0;
-  transform: translateY(28px);
+  transform: translate(var(--shift-x), var(--shift-y));
   transition:
     opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+/* Only swaps the offsets, so the fallbacks below that reset transform still apply. */
+.from-right {
+  --shift-x: 56px;
+  --shift-y: 0px;
 }
 
 [data-reveal].in {

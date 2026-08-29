@@ -28,6 +28,8 @@ const commonProjectSchema = z.object({
   order: z.number().optional(),
   role: z.string().optional(),
   dates: z.string().optional(),
+  visual: z.string().optional(),
+  visualAlt: z.string().optional(),
   situation: z.string().optional(),
   obstacle: z.string().optional(),
   decision: z.string().optional(),
