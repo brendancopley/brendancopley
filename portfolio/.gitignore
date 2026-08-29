@@ -25,3 +25,8 @@ logs
 rt_base
 
 .history
+
+# wrangler build state
+.wrangler
+.dev.vars*
+!.dev.vars.example

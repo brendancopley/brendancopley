@@ -23,6 +23,7 @@ onMounted(() => {
 
   // Respect the motion preference: reveal everything at once instead of on scroll.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Reveal everything at once and leave any video paused on its poster frame.
     items.forEach(el => el.classList.add('in'))
     return
   }
@@ -36,6 +37,7 @@ onMounted(() => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
         entry.target.classList.add('in')
+        entry.target.querySelector('video')?.play().catch(() => {})
         io?.unobserve(entry.target)
       }
     }
@@ -155,7 +157,27 @@ onBeforeUnmount(() => io?.disconnect())
         data-reveal
         style="--i: 3"
       >
+        <video
+          v-if="project.visual.endsWith('.webm')"
+          :poster="project.visual.replace('.webm', '-poster.webp')"
+          :aria-label="project.visualAlt"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source
+            :src="project.visual"
+            type="video/webm"
+          >
+          <!-- Safari only picked up VP9 recently and still varies by version. -->
+          <source
+            :src="project.visual.replace('.webm', '.mp4')"
+            type="video/mp4"
+          >
+        </video>
         <img
+          v-else
           :src="project.visual"
           :alt="project.visualAlt ?? ''"
           loading="lazy"
@@ -225,7 +247,8 @@ onBeforeUnmount(() => io?.disconnect())
   backdrop-filter: blur(2px);
 }
 
-.visual img {
+.visual img,
+.visual video {
   display: block;
   width: 100%;
   height: auto;
