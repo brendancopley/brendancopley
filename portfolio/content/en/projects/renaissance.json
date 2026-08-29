@@ -12,6 +12,6 @@
   "decision": "Built a content-moderation agent on a locally fine-tuned Qwen 2.5 inside NestJS, with a real evaluation pipeline (synthetic data, reinforcement learning from eval results, blind grading) while migrating the monolith to Symfony 6 incrementally.",
   "result": "100% accuracy on the moderation filter, under 1% hallucination on domain tasks, integrated across every production agent.",
   "date": "2023",
-  "visual": "/projects/diagram-renaissance.svg",
-  "visualAlt": "Pipeline diagram: a domain corpus feeds synthetic data generation, which fine-tunes Qwen 2.5 with LoRA on MLX. A held-out eval set is graded blind, results loop back as reinforcement learning, and a release gate holds the accuracy and hallucination thresholds."
+  "visual": "/projects/loop-ai.webm",
+  "visualAlt": "Looping animation from the Nearpod AI product page, showing the AI lesson-generation loop."
 }
