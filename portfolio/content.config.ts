@@ -23,6 +23,11 @@ const commonProjectSchema = z.object({
   release: z.string().nonempty(),
   date: z.string().nonempty(),
   featured: z.boolean().optional(),
+  // Overlay copy for the full-viewport panels on the home page.
+  order: z.number().optional(),
+  eyebrow: z.string().optional(),
+  summary: z.string().optional(),
+  detail: z.string().optional(),
 })
 
 const commonFaqSchema = z.object({

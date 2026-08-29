@@ -4,5 +4,9 @@
   "link": "https://www.linkedin.com/in/brendancopley",
   "release": "2025",
   "date": "2025",
-  "featured": true
+  "featured": true,
+  "order": 2,
+  "eyebrow": "Renaissance Learning \u00b7 2025",
+  "summary": "The company\u2019s first production AI product: a content-moderation agent on a locally fine-tuned Qwen 2.5 model inside a NestJS platform.",
+  "detail": "Synthetic data generation, reinforcement learning from eval results, and blind evaluations graders could not reliably call. 100% accuracy on the moderation filter, under 1% hallucination \u2014 serving 44 million students and teachers daily."
 }

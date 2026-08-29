@@ -3,5 +3,9 @@
   "image": "/projects/sisu.webp",
   "link": "https://jeremywalkerportfolio.com/work/SISU-Sweeper",
   "release": "2023",
-  "date": "2023"
+  "date": "2023",
+  "order": 8,
+  "eyebrow": "Lionsgate \u00b7 2023",
+  "summary": "A custom .NET backend on Azure Cosmos DB for the SISU film campaign.",
+  "detail": "Took a Bronze Clio in 2023."
 }

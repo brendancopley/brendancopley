@@ -4,5 +4,9 @@
   "link": "https://blockbrainpuzzle.com",
   "release": "2025",
   "date": "2025",
-  "featured": true
+  "featured": true,
+  "order": 4,
+  "eyebrow": "CS50 at Harvard \u00b7 2025",
+  "summary": "A browser logic puzzle inspired by Genius Square \u2014 62,208 valid board configurations generated from a seven-dice roll.",
+  "detail": "I built the generator, the solver that validates every board is actually solvable, timed scoring, and shareable URLs encoding board state and completion time. Final project for CS50; scored 100."
 }

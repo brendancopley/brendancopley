@@ -4,5 +4,9 @@
   "link": "https://github.com/brendancopley/mcp-chain-of-draft-prompt-tool",
   "release": "2025",
   "date": "2025",
-  "featured": true
+  "featured": true,
+  "order": 3,
+  "eyebrow": "Open source \u00b7 2025",
+  "summary": "An open-source Model Context Protocol server, and my most-starred repository. One scoped interface to tools and context instead of bespoke glue per integration.",
+  "detail": "Adopted by 30+ engineers, driven through live-coded tutorials and internal deep-dives rather than documentation alone."
 }

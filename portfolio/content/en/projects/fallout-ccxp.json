@@ -3,5 +3,9 @@
   "image": "/projects/fallout-ccxp.webp",
   "link": "https://jeremywalkerportfolio.com/work/Fallout-CCXP",
   "release": "2025",
-  "date": "2025"
+  "date": "2025",
+  "order": 7,
+  "eyebrow": "Amazon Prime Video \u00b7 Bethesda \u00b7 2025",
+  "summary": "A game activation for the Fallout TV series launch, deployed with an on-prem LibSQL leaderboard.",
+  "detail": "Engaged over 5,000 players across CCXP Brazil in 2023 and CCXP Mexico City in 2025."
 }

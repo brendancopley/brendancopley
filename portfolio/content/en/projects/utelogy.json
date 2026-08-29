@@ -3,5 +3,9 @@
   "image": "/projects/utelogy.webp",
   "link": "https://www.linkedin.com/in/brendancopley",
   "release": "2018",
-  "date": "2018"
+  "date": "2018",
+  "order": 6,
+  "eyebrow": "Utelogy \u00b7 2018",
+  "summary": "Real-time AV/IoT control, integrated on Microsoft\u2019s Redmond campus for the Azure security team \u2014 dashboards and live streams cast across 100+ monitors as a single video wall.",
+  "detail": "C#/.NET drivers talking to physical hardware, surfaced through WebSocket and SignalR sessions. Adoption grew over 600%, reaching 300+ schools."
 }
