@@ -5,7 +5,7 @@ export default defineAppConfig({
   },
   profile: {
     name: 'Brendan Copley',
-    job: 'Principal AI Engineer — production agentic systems',
+    job: 'Principal AI Engineer, production agentic systems',
     email: 'brendancopley@protonmail.com',
     // Deliberately no phone number: the contact surface is email and cal.com/radfab.
     location: 'Irvine, California',
@@ -18,7 +18,7 @@ export default defineAppConfig({
     linkedin: 'https://www.linkedin.com/in/brendancopley',
   },
   seo: {
-    title: 'Brendan Copley — Principal AI Engineer',
+    title: 'Brendan Copley, Principal AI Engineer',
     description: 'I build agentic AI systems that survive production. 12+ years shipping for Amazon Prime Video, Bethesda, Lionsgate, Cisco and Renaissance Learning. LangGraph, LangSmith, MLX fine-tuning and evaluation pipelines.',
     url: 'https://brendancopley.com',
   },

@@ -62,7 +62,7 @@ export default defineNuxtConfig({
   },
 
   // NOTE: the template disabled prerendering of '/' for Nuxt Studio live preview.
-  // That left the whole site as an SPA shell with no server-rendered HTML — the exact
+  // That left the whole site as an SPA shell with no server-rendered HTML, the exact
   // reason the old site was invisible to search engines. Every route is prerendered now.
 
   future: {

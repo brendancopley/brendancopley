@@ -55,7 +55,7 @@ onBeforeUnmount(() => io?.disconnect())
     >
       <!-- Plain <img>, not NuxtImg. These webps are already the right size (1536w, ~50KB)
            and a full-bleed background needs no srcset. NuxtImg with sizes="100vw" resolved
-           to /_ipx/w_2/ — a 2x1 pixel, 46-byte image stretched over the viewport. -->
+           to /_ipx/w_2/, a 2x1 pixel 46-byte image stretched over the viewport. -->
       <img
         :src="project.image"
         :alt="`Illustrative image for ${project.name}`"
@@ -72,21 +72,33 @@ onBeforeUnmount(() => io?.disconnect())
       />
       <div class="copy">
         <p class="eyebrow">
-          {{ project.eyebrow ?? project.release }}
+          {{ project.dates }}
         </p>
         <h2>{{ project.name }}</h2>
         <p
-          v-if="project.summary"
-          class="summary"
+          v-if="project.role"
+          class="role"
         >
-          {{ project.summary }}
+          {{ project.role }}
         </p>
-        <p
-          v-if="project.detail"
-          class="detail"
-        >
-          {{ project.detail }}
-        </p>
+        <dl class="sodr">
+          <div v-if="project.situation">
+            <dt>Situation</dt>
+            <dd>{{ project.situation }}</dd>
+          </div>
+          <div v-if="project.obstacle">
+            <dt>Obstacle</dt>
+            <dd>{{ project.obstacle }}</dd>
+          </div>
+          <div v-if="project.decision">
+            <dt>Decision</dt>
+            <dd>{{ project.decision }}</dd>
+          </div>
+          <div v-if="project.result">
+            <dt>Result</dt>
+            <dd>{{ project.result }}</dd>
+          </div>
+        </dl>
         <NuxtLink
           v-if="project.link"
           :to="project.link"
@@ -124,7 +136,7 @@ onBeforeUnmount(() => io?.disconnect())
 }
 
 /* Carries the text contrast. The copy sits in the bottom third, so the gradient is
-   weighted there — white on this passes AA comfortably. */
+   weighted there, so white on this passes AA comfortably. */
 .scrim {
   position: absolute;
   inset: 0;
@@ -170,18 +182,48 @@ onBeforeUnmount(() => io?.disconnect())
   margin: 0 0 1rem;
 }
 
-.summary {
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.92);
-  margin: 0 0 0.75rem;
+.role {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 1.25rem;
 }
 
-.detail {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.72);
+/* Four short labelled lines. The label column is fixed so the values align, and it
+   collapses to stacked rows on narrow viewports where 5rem of label is too much. */
+.sodr {
+  display: grid;
+  gap: 0.6rem;
   margin: 0 0 1.5rem;
+}
+
+.sodr > div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.9rem;
+  align-items: baseline;
+}
+
+.sodr dt {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(240, 160, 122, 0.85);
+}
+
+.sodr dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 640px) {
+  .sodr > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
 }
 
 .more {
@@ -214,7 +256,7 @@ onBeforeUnmount(() => io?.disconnect())
 }
 
 /* Without scripting the IntersectionObserver never runs, and .copy would stay at
-   opacity 0 — the entire portfolio invisible. Show it instead. */
+   opacity 0, leaving the entire portfolio invisible. Show it instead. */
 @media (scripting: none) {
   .copy {
     opacity: 1;

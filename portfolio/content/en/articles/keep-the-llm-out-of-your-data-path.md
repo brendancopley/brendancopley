@@ -1,6 +1,6 @@
 ---
 title: Keep the LLM out of your data path
-description: The single architectural decision that makes an agent auditable — the model selects and parameterises calls, the platform executes them. What it costs, what it buys, and how to structure it.
+description: The single architectural decision that makes an agent auditable. The model selects and parameterises calls, the platform executes them. What it costs, what it buys, and how to structure it.
 date: 2026-08-25
 image: /projects/moderation-agent.webp
 readingTime: 6 min read
@@ -19,7 +19,7 @@ It is also the design that makes an enterprise security review fail, and it is a
 ## The alternative, stated precisely
 
 Invert the relationship. The model does not call anything. It **emits a structured intent**
-— which operation, with which parameters — and your platform decides whether to execute it.
+(which operation, with which parameters) and your platform decides whether to execute it.
 
 ```
 model  →  { tool: "headcount_by_org", org_id: 4412, quarter: "2026Q3" }
@@ -48,7 +48,7 @@ of operations. Adding a capability is a deliberate change to an allowlist, not a
 property of a prompt.
 
 **Testability.** Intents are structured data. You can assert on them. "Given this question,
-the router should produce this call with these parameters" is an ordinary unit test — which
+the router should produce this call with these parameters" is an ordinary unit test, which
 means agent behaviour becomes something you can regression-test.
 
 ## What it costs
@@ -66,7 +66,7 @@ It is more work up front, and the cost is real:
 On a workforce-planning platform I architected at Cisco, this shape let domain-specialised
 agents work against approved Workday and Finance REST endpoints while the model stayed
 outside the credential boundary entirely. It processed roughly 2M records in under five
-seconds and reduced a multi-day planning cycle to hours — but the reason it shipped was
+seconds and reduced a multi-day planning cycle to hours, but the reason it shipped was
 that every action was auditable.
 
 ## When not to bother

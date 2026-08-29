@@ -46,7 +46,7 @@ useHead({
   link,
 })
 
-defineOgImage({ url: 'https://brendancopley.com/og.png', width: 1200, height: 630, alt: 'Brendan Copley — Principal AI Engineer' })
+defineOgImage({ url: 'https://brendancopley.com/og.png', width: 1200, height: 630, alt: 'Brendan Copley, Principal AI Engineer' })
 </script>
 
 <template>

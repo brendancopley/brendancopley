@@ -1,12 +1,14 @@
 {
+  "order": 10,
   "name": "MCP Chain of Draft",
+  "role": "Open source",
+  "dates": "2025",
+  "release": "2025",
   "image": "/projects/mcp-chain-of-draft.webp",
   "link": "https://github.com/brendancopley/mcp-chain-of-draft-prompt-tool",
-  "release": "2025",
-  "date": "2025",
-  "featured": true,
-  "order": 3,
-  "eyebrow": "Open source \u00b7 2025",
-  "summary": "An open-source Model Context Protocol server, and my most-starred repository. One scoped interface to tools and context instead of bespoke glue per integration.",
-  "detail": "Adopted by 30+ engineers, driven through live-coded tutorials and internal deep-dives rather than documentation alone."
+  "situation": "Every AI integration was re-implementing its own glue between agents, tools and context.",
+  "obstacle": "Adoption depended on other engineers actually picking it up, and documentation alone does not move people.",
+  "decision": "Open-sourced a Model Context Protocol server giving agents one scoped interface, and drove it through live-coded tutorials and internal deep-dives.",
+  "result": "My most-starred repository, adopted by 30+ engineers.",
+  "date": "2025"
 }

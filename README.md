@@ -3,7 +3,7 @@
 **Principal AI engineer. I build agentic systems that survive production.**
 
 Your agent works in a demo. I make it work against real data, real permissions and real
-scale — and I build the evaluation pipelines that prove it did.
+scale, and I build the evaluation pipelines that prove it did.
 
 12+ years shipping production software · **Amazon Prime Video** · **Bethesda** ·
 **Lionsgate** (Bronze Clio, 2023) · **Cisco** · **Renaissance Learning** (44M students daily)
@@ -15,13 +15,13 @@ scale — and I build the evaluation pipelines that prove it did.
 **[Cisco WWAI Multi-Agent Platform](https://www.linkedin.com/in/brendancopley)**
 LangGraph multi-agent system with a routing layer that dispatches to domain-specialised
 agents, each holding least-privilege access to approved REST endpoints. The LLM never
-touches data directly — it parameterises calls, the platform executes them, everything
+touches data directly. It parameterises calls, the platform executes them, and everything
 stays auditable. ~2M records in under 5s; a multi-day planning cycle became hours.
 OpenShift + Kubernetes.
 
-**[Content Moderation Agent — Renaissance Learning](https://www.linkedin.com/in/brendancopley)**
+**[Content Moderation Agent at Renaissance Learning](https://www.linkedin.com/in/brendancopley)**
 The company's first production AI product: a locally fine-tuned Qwen 2.5 model in a
-NestJS/TypeScript platform. Full evaluation pipeline — synthetic data generation,
+NestJS/TypeScript platform. Full evaluation pipeline: synthetic data generation,
 reinforcement learning from eval results, and blind evals where graders could not reliably
 tell AI output from human. 100% accuracy on the moderation filter, <1% hallucination on
 domain tasks.
@@ -32,7 +32,7 @@ context instead of per-integration glue. Adopted by 30+ engineers, driven throug
 live-coded tutorials rather than documentation alone.
 
 **[Block Brain Puzzle](https://blockbrainpuzzle.com)**
-Browser logic puzzle inspired by Genius Square — 62,208 valid boards from a seven-dice
+Browser logic puzzle inspired by Genius Square, with 62,208 valid boards from a seven-dice
 roll. Generator, solver validation, timed scoring, and shareable URLs encoding board state
 and completion time. Final project for **CS50 at Harvard**; scored 100.
 

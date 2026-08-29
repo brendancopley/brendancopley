@@ -1,0 +1,14 @@
+{
+  "order": 4,
+  "name": "Ethika",
+  "role": "Senior Web Developer, DevOps",
+  "dates": "Apr 2018 - May 2023",
+  "release": "2018",
+  "image": "/projects/ethika.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "situation": "A direct-to-consumer apparel brand could not absorb traffic spikes on its orders and shipping systems.",
+  "obstacle": "A rewrite was off the table, because the store had to keep selling throughout.",
+  "decision": "Refactored orders and shipping onto AWS Lambda and API Gateway, moved the storefront to a Vue SPA on S3 and CloudFront, and put CI/CD with Cypress end-to-end tests behind it.",
+  "result": "Spike-tolerant infrastructure with automated deploys, and a React Native app running on the same backend.",
+  "date": "2018"
+}

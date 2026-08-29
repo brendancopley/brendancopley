@@ -19,7 +19,7 @@ Here is the order things usually break, from the engagements I have run.
 ## 1. The happy path was the only path
 
 In a demo you drive the input. In production the input drives you. The first real failure
-is almost never the model — it is an empty result set, a null where the schema promised a
+is almost never the model. It is an empty result set, a null where the schema promised a
 string, a PDF that is actually a scanned image, or a user asking something adjacent to the
 workflow rather than inside it.
 
@@ -33,7 +33,7 @@ value rather than something you hope the model says.
 
 ## 2. Nobody scoped the permissions
 
-Most prototypes run with one set of credentials — usually the builder's, usually broad.
+Most prototypes run with one set of credentials, usually the builder's and usually broad.
 That is fine for a demo and disqualifying in production, because the moment the agent acts
 on behalf of different users it either leaks across them or needs a permission model
 retrofitted into a system that never had one.
@@ -80,7 +80,7 @@ asks.
 ## What this means if you have a prototype
 
 None of this argues against starting in a no-code tool. It argues that the prototype has
-finished its job the moment it proves the workflow is valuable — and that the next step is
+finished its job the moment it proves the workflow is valuable, and that the next step is
 a different kind of work.
 
 If you are at that point and want a second pair of eyes on what will break first,

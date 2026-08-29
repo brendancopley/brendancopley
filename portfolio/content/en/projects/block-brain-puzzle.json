@@ -1,12 +1,14 @@
 {
+  "order": 11,
   "name": "Block Brain Puzzle",
+  "role": "CS50 final project",
+  "dates": "2025",
+  "release": "2025",
   "image": "/projects/block-brain-puzzle.webp",
   "link": "https://blockbrainpuzzle.com",
-  "release": "2025",
-  "date": "2025",
-  "featured": true,
-  "order": 4,
-  "eyebrow": "CS50 at Harvard \u00b7 2025",
-  "summary": "A browser logic puzzle inspired by Genius Square \u2014 62,208 valid board configurations generated from a seven-dice roll.",
-  "detail": "I built the generator, the solver that validates every board is actually solvable, timed scoring, and shareable URLs encoding board state and completion time. Final project for CS50; scored 100."
+  "situation": "A logic puzzle in the spirit of Genius Square, with 62,208 valid board configurations from a seven-dice roll.",
+  "obstacle": "A randomly generated board is worthless if it turns out to have no solution.",
+  "decision": "Wrote the generator alongside a solver used to validate that every board produced is actually solvable, plus timed scoring and URLs that encode board state and completion time.",
+  "result": "Submitted as my CS50 at Harvard final project; scored 100.",
+  "date": "2025"
 }

@@ -1,11 +1,14 @@
 {
-  "name": "Utelogy U-Control 2.0",
+  "order": 5,
+  "name": "Utelogy",
+  "role": "Lead Software Developer",
+  "dates": "Nov 2016 - Apr 2018",
+  "release": "2016",
   "image": "/projects/utelogy.webp",
   "link": "https://www.linkedin.com/in/brendancopley",
-  "release": "2018",
-  "date": "2018",
-  "order": 6,
-  "eyebrow": "Utelogy \u00b7 2018",
-  "summary": "Real-time AV/IoT control, integrated on Microsoft\u2019s Redmond campus for the Azure security team \u2014 dashboards and live streams cast across 100+ monitors as a single video wall.",
-  "detail": "C#/.NET drivers talking to physical hardware, surfaced through WebSocket and SignalR sessions. Adoption grew over 600%, reaching 300+ schools."
+  "situation": "AV and IoT estates were controlled device by device, with no central view of any of it.",
+  "obstacle": "Microsoft’s Azure security team needed dashboards across 100+ monitors as a single video wall, on-premises and dependable.",
+  "decision": "Architected U-Control 2.0 in C# and .NET, with hardware drivers surfaced to the frontend through WebSocket and SignalR, deployed via Azure DevOps.",
+  "result": "Adoption grew over 600%, reaching 300+ schools in Southern California, and the video wall shipped as a core Utelogy offering.",
+  "date": "2016"
 }

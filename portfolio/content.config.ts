@@ -23,11 +23,15 @@ const commonProjectSchema = z.object({
   release: z.string().nonempty(),
   date: z.string().nonempty(),
   featured: z.boolean().optional(),
-  // Overlay copy for the full-viewport panels on the home page.
+  // Overlay copy for the full-viewport panels on the home page. Each panel is a role
+  // or an independent project, in reverse-chronological order, with a SODR write-up.
   order: z.number().optional(),
-  eyebrow: z.string().optional(),
-  summary: z.string().optional(),
-  detail: z.string().optional(),
+  role: z.string().optional(),
+  dates: z.string().optional(),
+  situation: z.string().optional(),
+  obstacle: z.string().optional(),
+  decision: z.string().optional(),
+  result: z.string().optional(),
 })
 
 const commonFaqSchema = z.object({

@@ -1,0 +1,14 @@
+{
+  "order": 9,
+  "name": "Independent",
+  "role": "Freelance Web Developer",
+  "dates": "Sep 2009 - Jun 2016",
+  "release": "2009",
+  "image": "/projects/freelance.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "situation": "Small businesses and healthcare groups needed software and had no engineering function to build it.",
+  "obstacle": "Every client arrived with a different stack, a different budget and a different tolerance for risk.",
+  "decision": "Delivered e-commerce and single-page applications across AWS and Azure, automating deployments with early CloudFormation and adding Redis caching where the load justified it.",
+  "result": "Seven years of repeat client work, and the foundation for what became RADFAB.",
+  "date": "2009"
+}
