@@ -56,8 +56,14 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    private: {
+      // Supplied at runtime as a Worker secret: NUXT_PRIVATE_RESEND_API_KEY.
+      resendApiKey: '',
+    },
     public: {
-      resend: !!process.env.NUXT_PRIVATE_RESEND_API_KEY,
+      // The endpoint ships with every deploy now, so the form is always live.
+      // A missing key surfaces as a 503 from the handler, not as a dead form.
+      resend: true,
     },
   },
 
@@ -76,6 +82,15 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-05',
 
   nitro: {
+    // Cloudflare Workers with static assets. Nitro emits the worker entry at
+    // .output/server/index.mjs and the prerendered site at .output/public.
+    preset: 'cloudflare_module',
+    cloudflare: {
+      // Emits .output/server/wrangler.json with `main` and the ASSETS binding
+      // already pointed at .output/public, merged over ./wrangler.jsonc.
+      deployConfig: true,
+      nodeCompat: true,
+    },
     experimental: {
       websocket: true,
     },
@@ -88,13 +103,13 @@ export default defineNuxtConfig({
 
   hooks: {
     'nitro:config': (config) => {
-      if (process.env.NUXT_PRIVATE_RESEND_API_KEY) {
-        config.handlers?.push({
-          method: 'post',
-          route: '/api/emails/send',
-          handler: '~~/server/emails/send.ts',
-        })
-      }
+      // Registered unconditionally. This used to depend on the build machine
+      // holding the API key, which on a static host meant never.
+      config.handlers?.push({
+        method: 'post',
+        route: '/api/emails/send',
+        handler: '~~/server/emails/send.ts',
+      })
     },
   },
 
