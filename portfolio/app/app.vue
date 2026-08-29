@@ -3,6 +3,38 @@ import { Toaster } from 'vue-sonner'
 import * as locales from '@nuxt/ui/locale'
 
 const { locale } = useI18n()
+const { profile, seo, socials } = useAppConfig()
+
+useSchemaOrg([
+  definePerson({
+    name: profile.name,
+    jobTitle: profile.job,
+    description: seo.description,
+    image: profile.picture,
+    url: seo.url,
+    sameAs: [socials.github, socials.linkedin],
+    knowsAbout: [
+      'LangGraph',
+      'LangChain',
+      'LangSmith',
+      'Multi-agent systems',
+      'Model Context Protocol',
+      'LLM evaluation',
+      'MLX fine-tuning',
+      'Retrieval-augmented generation',
+      'Kubernetes',
+      'Distributed systems',
+    ],
+    worksFor: {
+      '@type': 'Organization',
+      name: 'RADFAB',
+      description: 'Independent AI engineering consultancy.',
+      url: seo.url,
+    },
+  }),
+  defineWebSite({ name: seo.title, url: seo.url, inLanguage: 'en-US' }),
+  defineWebPage(),
+])
 </script>
 
 <template>

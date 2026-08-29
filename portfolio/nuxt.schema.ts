@@ -33,7 +33,7 @@ export default defineNuxtSchema({
           title: 'Name',
           description: 'Your name.',
           icon: 'lucide:user',
-          default: 'Hugo Richard',
+          default: 'Brendan Copley',
         }),
         job: field({
           type: 'string',
@@ -47,14 +47,14 @@ export default defineNuxtSchema({
           title: 'Email',
           description: 'Your email.',
           icon: 'lucide:mail',
-          default: 'contact@hrcd.fr',
+          default: 'brendancopley@protonmail.com',
         }),
         phone: field({
           type: 'string',
           title: 'Phone',
           description: 'Your phone.',
           icon: 'lucide:phone',
-          default: '(+33) 6 21 56 22 18',
+          default: '',
         }),
         picture: field({
           type: 'string',

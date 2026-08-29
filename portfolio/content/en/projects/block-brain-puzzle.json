@@ -1,0 +1,16 @@
+{
+  "order": 11,
+  "name": "Block Brain Puzzle",
+  "role": "CS50 final project",
+  "dates": "2025",
+  "release": "2025",
+  "image": "/projects/block-brain-puzzle.webp",
+  "link": "https://blockbrainpuzzle.com",
+  "situation": "A logic puzzle in the spirit of Genius Square, with 62,208 valid board configurations from a seven-dice roll.",
+  "obstacle": "A randomly generated board is worthless if it turns out to have no solution.",
+  "decision": "Wrote the generator alongside a solver used to validate that every board produced is actually solvable, plus timed scoring and URLs that encode board state and completion time.",
+  "result": "Submitted as my CS50 at Harvard final project; scored 100.",
+  "date": "2025",
+  "visual": "/projects/shot-block-brain-puzzle.webp",
+  "visualAlt": "Screenshot of Block Brain Puzzle mid-game: seven dice have set the blocker positions on a six by six board, with the timer running and the piece tray below."
+}

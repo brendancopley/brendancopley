@@ -1,0 +1,16 @@
+{
+  "order": 7,
+  "name": "Young Company",
+  "role": "Programmer & Web Designer",
+  "dates": "Jun 2016 - Sep 2016",
+  "release": "2016",
+  "image": "/projects/young-company.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "situation": "Client landing pages were losing mobile visitors before the page finished loading.",
+  "obstacle": "The creative direction was the product, so speed could not come out of the design.",
+  "decision": "Built Google AMP landing pages and tuned the existing PHP and MySQL stack for performance and search.",
+  "result": "Award-winning mobile experiences that kept the design intent intact.",
+  "date": "2016",
+  "visual": "/projects/shot-youngco.webp",
+  "visualAlt": "Screenshot of youngcompany.com, the marketing agency whose client landing pages and AMP work this covers."
+}

@@ -1,0 +1,17 @@
+{
+  "order": 1,
+  "name": "Cisco",
+  "role": "Senior AI Software Engineer",
+  "dates": "Jun 2025 - Present",
+  "release": "2025",
+  "image": "/projects/cisco-wwai.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "featured": true,
+  "situation": "Workforce planning across the enterprise ran on manual cycles that took days.",
+  "obstacle": "The data sat behind HR and Finance APIs that an LLM could not be trusted to query directly.",
+  "decision": "Built a LangGraph multi-agent system with a routing layer, so agents emit validated calls under least privilege and the platform executes them.",
+  "result": "~2M records in under five seconds, a multi-day cycle down to hours, and every action auditable. Deployed on OpenShift and Kubernetes.",
+  "date": "2025",
+  "visual": "/projects/diagram-cisco.svg",
+  "visualAlt": "Architecture diagram: a request is classified by a routing layer and dispatched to domain-specialised agents, which emit validated calls that the platform executes against approved Workday and Finance endpoints. The model sits outside the credential boundary."
+}

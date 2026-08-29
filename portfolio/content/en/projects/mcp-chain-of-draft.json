@@ -1,0 +1,16 @@
+{
+  "order": 10,
+  "name": "MCP Chain of Draft",
+  "role": "Open source",
+  "dates": "2025",
+  "release": "2025",
+  "image": "/projects/mcp-chain-of-draft.webp",
+  "link": "https://github.com/brendancopley/mcp-chain-of-draft-prompt-tool",
+  "situation": "Chain-of-thought prompting makes agents reason at length, and every intermediate token is paid for on each call.",
+  "obstacle": "Chain of Draft is terser, but it was a paper technique with no way to drop it into an existing agent.",
+  "decision": "Open-sourced it as a Model Context Protocol server, so any MCP-speaking agent gets the technique through one scoped interface, with whichever model you bring.",
+  "result": "My most-starred repository, adopted by 30+ engineers, driven through live-coded tutorials rather than documentation alone.",
+  "date": "2025",
+  "visual": "/projects/shot-mcp-repo.webp",
+  "visualAlt": "Screenshot of the mcp-chain-of-draft-prompt-tool repository on GitHub, showing 19 stars, 52 commits and topics including model-context-protocol and chain-of-draft."
+}

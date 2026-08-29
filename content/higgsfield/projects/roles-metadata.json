@@ -1,0 +1,47 @@
+{
+  "ethika": {
+    "jobId": "371bac45-1f8c-41cc-b3cd-1e8ad62b3bb6",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_184901_371bac45-1f8c-41cc-b3cd-1e8ad62b3bb6.png",
+    "prompt": "A dark apparel stockroom after hours: neatly folded garments on steel shelving, sealed shipping cartons stacked on a pallet, a handheld barcode scanner resting on a packing bench, one warm overhead work light. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/ethika.png"
+  },
+  "traffik": {
+    "jobId": "7c53202c-1313-44a9-9777-43f8dfa7fc22",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_184905_7c53202c-1313-44a9-9777-43f8dfa7fc22.png",
+    "prompt": "A creative agency studio at night, monitors dark and asleep, pinned paper layouts across a corkboard wall, an empty chair pushed back from a desk, one warm desk lamp still on. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/traffik.png"
+  },
+  "young-company": {
+    "jobId": "9eeebf18-75ee-4db9-9a2e-33ae0ab15c32",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_184909_9eeebf18-75ee-4db9-9a2e-33ae0ab15c32.png",
+    "prompt": "A designer's desk at night: printed page layouts fanned out beside a phone lying face down, a loupe and pencils, warm lamp light raking across the paper from the left. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/young-company.png"
+  },
+  "akua": {
+    "jobId": "da794398-7b09-4919-9955-0835f14d947d",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_184913_da794398-7b09-4919-9955-0835f14d947d.png",
+    "prompt": "A calm clinic reception after closing: an empty waiting area with soft upholstered chairs, a low warm lamp on the counter, plants in shadow, deep quiet. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/akua.png"
+  },
+  "freelance": {
+    "jobId": "86fb2538-3b56-4499-9f91-884f7ed31b0c",
+    "status": "completed",
+    "resultUrl": "https://d8j0ntlcm91z4.cloudfront.net/user_3IJMVoe2vjbwifcYz53Srq8I8Lo/hf_20260829_184917_86fb2538-3b56-4499-9f91-884f7ed31b0c.png",
+    "prompt": "A home office at night: a single laptop open on a wooden desk beside a cold mug of coffee, notebook and pen, one warm lamp, the rest of the room in darkness. Dark, restrained documentary engineering photography. Low-key lighting, deep near-black background, a single warm practical light source, shallow depth of field, muted desaturated palette with one warm amber accent, real hardware and real workspaces, 35mm look with natural grain, unstaged. Negative: no readable text, no legible code, no logos, no watermark, no brand marks, no glowing blue brain, no humanoid robot, no android, no circuit-board metaphor, no neon cyberpunk grid, no floating holograms, no identifiable faces, no stock-photo smiles, no copyrighted characters or franchise imagery.",
+    "model": "gpt_image_2",
+    "aspectRatio": "16:9",
+    "file": "media-src/projects/freelance.png"
+  }
+}

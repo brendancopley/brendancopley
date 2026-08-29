@@ -4,6 +4,10 @@ export type Navigation = {
   name: string
   to: string
   icon: string
+  /** External destinations open in a new tab and are never passed through localePath. */
+  external?: boolean
+  /** Marks the primary call to action so the navbar can accent it. */
+  primary?: boolean
 }
 
 export function getNavigation(where: Where): Record<string, Navigation> | [] {
@@ -14,11 +18,6 @@ export function getNavigation(where: Where): Record<string, Navigation> | [] {
           name: 'Home',
           to: '/',
           icon: 'lucide:home',
-        },
-        works: {
-          name: 'Works',
-          to: '/works',
-          icon: 'lucide:briefcase',
         },
         writing: {
           name: 'Writing',
@@ -34,6 +33,25 @@ export function getNavigation(where: Where): Record<string, Navigation> | [] {
           name: 'Contact',
           to: '/contact',
           icon: 'lucide:mail',
+        },
+        github: {
+          name: 'GitHub',
+          to: 'https://github.com/brendancopley',
+          icon: 'custom:github',
+          external: true,
+        },
+        linkedin: {
+          name: 'LinkedIn',
+          to: 'https://www.linkedin.com/in/brendancopley',
+          icon: 'custom:linkedin',
+          external: true,
+        },
+        meeting: {
+          name: 'Schedule a meeting',
+          to: 'https://cal.com/radfab',
+          icon: 'lucide:calendar-days',
+          external: true,
+          primary: true,
         },
       }
     default:

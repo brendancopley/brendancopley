@@ -1,0 +1,16 @@
+{
+  "order": 8,
+  "name": "AKUA Mind & Body",
+  "role": "Programmer, Web Designer & SEO Manager",
+  "dates": "Jan 2016 - Jun 2016",
+  "release": "2016",
+  "image": "/projects/akua.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "situation": "A multi-location mental health provider needed people to be able to reach its services online.",
+  "obstacle": "Availability mattered more than features, because patients were finding care through these pages.",
+  "decision": "Built and maintained the applications on AWS EC2 and Elastic Beanstalk with MySQL, and integrated Salesforce with the VOIP customer-service flow.",
+  "result": "Reliable access across every location, with search and social integration lifting visibility.",
+  "date": "2016",
+  "visual": "/projects/shot-akua.webp",
+  "visualAlt": "Screenshot of akuamindbody.com, the multi-location mental health provider whose web applications this work built and maintained."
+}

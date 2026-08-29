@@ -1,0 +1,17 @@
+{
+  "order": 3,
+  "name": "Renaissance Learning",
+  "role": "Senior Software Engineer",
+  "dates": "May 2023 - May 2025",
+  "release": "2023",
+  "image": "/projects/moderation-agent.webp",
+  "link": "https://www.linkedin.com/in/brendancopley",
+  "featured": true,
+  "situation": "An ed-tech platform serving 44 million students daily had no production AI and a 700k-line PHP monolith underneath it.",
+  "obstacle": "Moderation had to be trustworthy enough for classrooms, and \"the output looks better\" is not a measurement.",
+  "decision": "Built a content-moderation agent on a locally fine-tuned Qwen 2.5 inside NestJS, with a real evaluation pipeline (synthetic data, reinforcement learning from eval results, blind grading) while migrating the monolith to Symfony 6 incrementally.",
+  "result": "100% accuracy on the moderation filter, under 1% hallucination on domain tasks, integrated across every production agent.",
+  "date": "2023",
+  "visual": "/projects/diagram-renaissance.svg",
+  "visualAlt": "Pipeline diagram: a domain corpus feeds synthetic data generation, which fine-tunes Qwen 2.5 with LoRA on MLX. A held-out eval set is graded blind, results loop back as reinforcement learning, and a release gate holds the accuracy and hallucination thresholds."
+}

@@ -1,5 +1,6 @@
 <template>
-  <section class="relative pt-12">
+  <div>
+    <section class="relative pt-12">
     <!-- grid -->
     <div class="pointer-events-none absolute inset-0 bg-center bg-grid-white/10 bg-grid-16 [mask-image:radial-gradient(white,transparent_85%)]" />
 
@@ -53,23 +54,15 @@
           style="--stagger: 4"
           data-animate
         />
-
-        <div
-          style="--stagger: 5"
-          data-animate
-          class="mt-12 flex w-full max-w-3xl flex-col gap-4 lg:mt-16"
-        >
-          <!-- projects -->
-          <HomeProjects />
-        </div>
-
-        <Divider class="my-9" />
-
-        <HomeFaq
-          style="--stagger: 6"
-          data-animate
-        />
       </div>
     </div>
   </section>
+
+  <!-- The portfolio itself: one full-viewport panel per project. -->
+  <HomeWorkScroll />
+
+  <section class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <HomeFaq />
+  </section>
+  </div>
 </template>
