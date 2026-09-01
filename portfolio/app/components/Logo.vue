@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { appName } = useAppConfig()
+const { profile } = useAppConfig()
 
 defineProps({
   isText: {
@@ -7,23 +7,34 @@ defineProps({
     default: false,
   },
 })
+
+// Derived from app.config rather than hardcoded, so the mark follows the
+// profile name. This replaced the Nuxt template's `custom:maison-hochard`
+// icon, which was the template author's own studio monogram.
+const initials = computed(() =>
+  String(profile.name)
+    .split(' ')
+    .map(part => part.charAt(0))
+    .join('')
+    .slice(0, 2)
+    .toUpperCase(),
+)
 </script>
 
 <template>
   <NuxtLinkLocale
     to="/"
     class="flex shrink-0 items-center"
-    aria-label="Go back to home page"
+    :aria-label="`${profile.name} — go back to home page`"
   >
-    <UIcon
-      name="custom:maison-hochard"
-      class="size-8"
-    />
+    <span class="font-newsreader text-white-shadow text-2xl italic leading-none">
+      {{ initials }}
+    </span>
     <span
       v-if="isText"
-      class="ml-1 text-xs font-semibold"
+      class="ml-2 text-xs font-semibold"
     >
-      {{ appName }}
+      {{ profile.name }}
     </span>
   </NuxtLinkLocale>
 </template>
