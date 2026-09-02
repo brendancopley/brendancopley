@@ -167,6 +167,14 @@ onBeforeUnmount(() => io?.disconnect())
             <dd>{{ project.result }}</dd>
           </div>
         </dl>
+        <p
+          v-if="project.caveat"
+          class="caveat"
+          data-reveal
+          style="--i: 8"
+        >
+          {{ project.caveat }}
+        </p>
         <NuxtLink
           v-if="project.link"
           :to="project.link"
@@ -174,7 +182,7 @@ onBeforeUnmount(() => io?.disconnect())
           rel="noopener"
           class="more"
           data-reveal
-          style="--i: 8"
+          style="--i: 9"
         >
           {{ project.link.includes('linkedin.com') ? 'More on LinkedIn' : 'Visit' }}
           <UIcon
@@ -227,7 +235,16 @@ onBeforeUnmount(() => io?.disconnect())
   align-items: flex-end;
   gap: 4vw;
   width: 100%;
-  padding: 0 6vw 12vh;
+  /* The navbar is fixed to the top on >=sm. Without top padding a panel whose
+     copy is tall enough to reach the top slides its eyebrow under that navbar;
+     the panels bottom-align, so nothing stops it. Panels with slack are
+     unaffected, since this only eats into space they were not using. */
+  padding: clamp(4.5rem, 8vh, 6.5rem) 6vw 12vh;
+}
+/* A caveat adds ~200px of copy, so give that panel back some of the floor
+   rather than letting it grow well past one screen. */
+.inner:has(.caveat) {
+  padding-bottom: 7vh;
 }
 
 .copy {
@@ -372,6 +389,25 @@ onBeforeUnmount(() => io?.disconnect())
   }
 }
 
+/* A quiet aside for context that qualifies a panel's headline dates,
+   deliberately lighter than .sodr dd so it reads as a footnote. */
+/* Only the panel that actually carries a caveat gives up the gap, so the
+   other ten keep their original rhythm. */
+.sodr:has(+ .caveat) {
+  margin-bottom: 0.75rem;
+}
+.caveat {
+  margin: 0 0 1rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(240, 160, 122, 0.35);
+  max-width: 68ch;
+  /* Deliberately smaller and tighter than .sodr dd. A panel carrying a caveat
+     runs ~200px taller than its siblings, and the panels bottom-align inside
+     100svh, so a roomier footnote pushes the eyebrow up under the fixed nav. */
+  font-size: clamp(0.78rem, 0.85vw, 0.875rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.6);
+}
 .more {
   display: inline-flex;
   align-items: center;

@@ -34,6 +34,9 @@ const commonProjectSchema = z.object({
   obstacle: z.string().optional(),
   decision: z.string().optional(),
   result: z.string().optional(),
+  // Optional footnote qualifying a panel, e.g. that a headline date range
+  // covers bursty project work rather than continuous engagement.
+  caveat: z.string().optional(),
 })
 
 const commonFaqSchema = z.object({
